@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedures</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" 
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesSE.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+        <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
+        <div class="container"> <!-- Container will contain content in certain space in middle of page -->
+            <a href="index.html" class="navbar-brand">
+                <img src="images/sitelogo.png" alt="Water Logo" class="d-inline-block align-text-top w-25">
+            </a>
+
+            <!-- Hamburger Menu Button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- Links to hamburger menu button -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>   
+
+    <!-- Simplified research project procedure -->
+    <section class="procedure">
+        <div class="container">
+          <br> <!-- Line break -->
+          <div class="text-center">
+            <h1>Procedure</h1>
+          </div>
+          <hr><br> <!-- Horizontal line and line break -->
+    
+          <table class="table table-hover text-center table-light table-bordered border-dark-subtle">
+            <thead>
+              <tr class="table-success">
+                <th><h3>Step</h3></th>
+                <th><h3>Description</h3></th>
+                <th><h3>Image</h3></th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>1</h3>
+                </th> <!-- scope="row" specifies header cell is the header for a row -->
+                <td>
+                  <h2 class="howTo">Create a New Google Colaboratory Notebook</h2>
+                  <p class="howTo">Google Colab provides access to powerful GPUs to help reduce training time.</p>
+                </td>
+                <td class="text-center"><img src="images/colablogo.png" id="procedureimage" alt="Google Colaboratory Logo"></td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>2</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Import Keras and Numpy</h3>
+                  <p class="howTo">These libraries assist with creating the machine learning model and manipulating the data.</p>
+                </td>
+                <td class="text-center"><img src="images/keraslogo.png" id="procedureimage" alt="Keras Logo"></td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>3</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Import, Normalize, and Split the Chlorophyll-a, Nitrogen, and Phosphorus Data from Acton Lake</h3>
+                  <p class="howTo">The data was normalized to ensure that each measure contributes equally when training the model and split into training and testing data.</p>
+                </td>
+                <td class="text-center"><img src="images/actonlake.jpeg" id="procedureimage" alt="Acton Lake"></td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>4</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Define the Long Short-Term Memory Machine Learning (LSTM) Model using Keras</h3>
+                  <p class="howTo">The model has 4 total layers: 3 LSTM layers and 1 dense layer.</p>
+                </td>
+                <td class="text-center"><img src="images/modeldiagram.png" id="procedureimage" alt="Diagram of the LSTM Model"></td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>5</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Train the Model</h3>
+                  <p class="howTo">The model was trained for 200 epochs on the training data.</p>
+                </td>
+                <td class="text-center" ><img src="images/traindiagram.png"id="procedureimage" alt="Training MSE Figure"></td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="table-secondary">
+                  <h3>6</h3>
+                </th>
+                <td>
+                  <h3 class="howTo">Test and Evaluate the Model</h3>
+                  <p class="howTo">The testing data was used to determine the performance of the model. The model performed well with a mean absolute error value of 3.904 and mean absolute percent error value of 5.365% for the trophic state index (TSI) values. </p>
+                </td>
+                <td class="text-center"><img src="images/actualvscalculatedTSI.png" id="procedureimage" alt="Actual Vs Calculated TSI Values"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    <!-- Footer (Requires Bootstrap Icons CSS)-->
+    <footer class="p-5 footer text-light text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

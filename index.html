@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" 
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesSE.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+        <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
+        <div class="container"> <!-- Container will contain content in certain space in middle of page -->
+            <a href="index.html" class="navbar-brand">
+                <img src="images/sitelogo.png" alt="Water Logo" class="d-inline-block align-text-top w-25">
+            </a>
+
+            <!-- Hamburger Menu Button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- Links to hamburger menu button -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="showcase text-light p-2 text-center"> <!-- showcase is custom CSS-->
+        <!-- headerBG = custon css BG color, p-2 = padding 2 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <!-- img-fluid = won't expand image larger than the container and will scale down if neccesary-->
+                    <img class="img-fluid" src="images/lstmcell.png" alt="LSTM Cell Diagram"> <!-- w-50 = 50%-->
+                </div>
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <div class="container">
+                        <h1 class="display-4">Using a Long Short-Term Memory (LSTM) Network to Forecast the Future Trophic State of Lakes</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+
+    <section class="overview text-dark p-2 text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding to -->
+                    <img class="img-fluid" src="images/eutrophiclake.jpeg" alt="Eutrophic Lake">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft">Background</h1> <!-- ovPadLeft - custom padding left-->
+                    <p class="lead overview-font ovPadLeft">
+                        Lakes serve many purposes, such as residential water sources, irrigation, recreation, 
+                        and as habitats for various marine life. However, eutrophication promotes harmful algal
+                        blooms (HABs). HABs can compromise the water quality of lakes and be detrimental to marine 
+                        ecosystems. One consequence of eutrophication is a decrease in dissolved oxygen levels 
+                        caused by the decomposition of algae. The decrease creates conditions in which some 
+                        marine organisms cannot survive, resulting in a decline of biodiversity. In addition, 
+                        eutrophication has been associated with an increase in harmful cyanobacteria.   
+                    </p>
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadRight">Rationale</h1> <!-- ovPadLeft - custom padding left-->
+                    <p class="lead overview-font ovPadRight">
+                        Current methods for forecasting eutrophication include simulations and machine learning (ML) 
+                        models. One disadvantage of simulations is their need for numerous data of a water body 
+                        and its environment for calibration and verification. This process can be costly and time-consuming. 
+                        In addition, simulations require a deep understanding of its processes to effectively calibrate. 
+                        For example, the Environmental Fluid Dynamics Code required field data such as temperature, nutrient 
+                        decay rates, and nutrient flux rates. Previous ML models to forecast eutrophication, although 
+                        successful in predicting algal biomass, have not considered both total nitrogen and total phosphorus as 
+                        inputs. This study proposes an LSTM model to forecast the future chlorophyll-a, total phosphorus, and 
+                        total nitrogen levels of lakes based on the past data. Using these forecasted values, the trophic state 
+                        index value and trophic state of the lake is calculated.
+                    </p>
+                </div>
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding to -->
+                    <img class="img-fluid" src="images/eutrophicationcauses.png" alt="Diagram of Eutrophication Causes">
+                </div>
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding to -->
+                    <img class="img-fluid" src="images/actualvscalculatednitrogen.png" alt="Actual vs Calculated Total Nitrogen Values">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft">Results</h1> <!-- ovPadLeft - custom padding left-->
+                    <p class="lead overview-font ovPadLeft">
+                        The accuracy of the training data was evaluated by calculating the mean square error (MSE) value at each epochs, 
+                        and it was observed that the MSE value decreased from 0.137 in the first epoch to 0.058 in the 200th epoch. 
+                        Similarly, the accuracy of the validation data was evaluated, which was the same as the test data. The MSE value 
+                        at different epochs was calculated, and it was observed that the MSE value decreased from 0.113 in the first epoch to 
+                        0.056 in the 200th epoch. After the model was evaluated on the test data. The model was able to forecast future TSI values 
+                        accurately as the mean absolute error was 3.904 and mean absolute percent error was 5.365%.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (Requires Bootstrap Icons CSS)-->
+    <footer class="p-5 footer text-light text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
