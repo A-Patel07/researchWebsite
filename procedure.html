@@ -17,34 +17,34 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
-        <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
-        <div class="container"> <!-- Container will contain content in certain space in middle of page -->
-            <a href="index.html" class="navbar-brand">
-                <img src="images/sitelogo.png" alt="Water Logo" class="d-inline-block align-text-top w-25">
-            </a>
+      <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
+      <div class="container"> <!-- Container will contain content in certain space in middle of page -->
+          <a href="index.html" class="navbar-brand">
+              <img src="images/sitelogo.png" alt="Site Logo" class="d-inline-block align-text-top w-25">
+          </a>
 
-            <!-- Hamburger Menu Button-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <!-- Hamburger Menu Button-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <!-- Collapsible navbar menu with custom hover underline CSS animation -->
-            <div class="collapse navbar-collapse" id="navmenu">
-                <!-- Links to hamburger menu button -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>   
+          <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+          <div class="collapse navbar-collapse" id="navmenu">
+              <!-- Links to hamburger menu button -->
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>   
 
     <!-- Simplified research project procedure -->
     <section class="procedure">
@@ -70,7 +70,9 @@
                 </th> <!-- scope="row" specifies header cell is the header for a row -->
                 <td>
                   <h2 class="howTo">Create a New Google Colaboratory Notebook</h2>
-                  <p class="howTo">Google Colab provides access to powerful GPUs to help reduce training time.</p>
+                  <ul>
+                    <li class="howTo">Google Colab provides access to powerful GPUs to help reduce training time</li>
+                  </ul>
                 </td>
                 <td class="text-center"><img src="images/colablogo.png" id="procedureimage" alt="Google Colaboratory Logo"></td>
               </tr>
@@ -80,7 +82,9 @@
                 </th>
                 <td>
                   <h3 class="howTo">Import Keras and Numpy</h3>
-                  <p class="howTo">These libraries assist with creating the machine learning model and manipulating the data.</p>
+                  <ul>
+                    <li class="howTo">These libraries assist with creating the machine learning model and manipulating the data</li>
+                  </ul>
                 </td>
                 <td class="text-center"><img src="images/keraslogo.png" id="procedureimage" alt="Keras Logo"></td>
               </tr>
@@ -90,7 +94,11 @@
                 </th>
                 <td>
                   <h3 class="howTo">Import, Normalize, and Split the Chlorophyll-a, Nitrogen, and Phosphorus Data from Acton Lake</h3>
-                  <p class="howTo">The data was normalized to ensure that each measure contributes equally when training the model and split into training and testing data.</p>
+                  <ul>
+                    <li class="howTo">The data was normalized to ensure that each measure contributes equally when training the model</li>
+                    <li class="howTo">The data was split into training and testing data</li>
+                  </ul>
+                  <p class="howTo"></p>
                 </td>
                 <td class="text-center"><img src="images/actonlake.jpeg" id="procedureimage" alt="Acton Lake"></td>
               </tr>
@@ -100,7 +108,9 @@
                 </th>
                 <td>
                   <h3 class="howTo">Define the Long Short-Term Memory Machine Learning (LSTM) Model using Keras</h3>
-                  <p class="howTo">The model has 4 total layers: 3 LSTM layers and 1 dense layer.</p>
+                  <ul>
+                    <li class="howTo">The model has 4 total layers: 3 LSTM layers and 1 dense layer</li>
+                  </ul>
                 </td>
                 <td class="text-center"><img src="images/modeldiagram.png" id="procedureimage" alt="Diagram of the LSTM Model"></td>
               </tr>
@@ -110,7 +120,9 @@
                 </th>
                 <td>
                   <h3 class="howTo">Train the Model</h3>
-                  <p class="howTo">The model was trained for 200 epochs on the training data.</p>
+                  <ul>
+                    <li class="howTo">The model was trained for 200 epochs on the training data</li>
+                  </ul>
                 </td>
                 <td class="text-center" ><img src="images/traindiagram.png"id="procedureimage" alt="Training MSE Figure"></td>
               </tr>
@@ -120,7 +132,10 @@
                 </th>
                 <td>
                   <h3 class="howTo">Test and Evaluate the Model</h3>
-                  <p class="howTo">The testing data was used to determine the performance of the model. The model performed well with a mean absolute error value of 3.904 and mean absolute percent error value of 5.365% for the trophic state index (TSI) values. </p>
+                  <ul>
+                    <li class="howTo">The testing data was used to determine the performance of the model</li>
+                    <li class="howTo">The model performed well with a mean absolute error value of 3.904 and mean absolute percent error value of 5.365% for the trophic state index (TSI) values</li>
+                  </ul>
                 </td>
                 <td class="text-center"><img src="images/actualvscalculatedTSI.png" id="procedureimage" alt="Actual Vs Calculated TSI Values"></td>
               </tr>
