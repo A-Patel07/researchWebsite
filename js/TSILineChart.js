@@ -1,5 +1,5 @@
 async function getData() {
-    const response = await fetch('../data/Research-Site-Data.csv');
+    const response = await fetch('/researchWebsite/data/Research-Site-Data.csv');
     const data = await response.text();     //CSV  is in TEXT format
 
     const xWeeks = []; //x-axis labels = weeks after input data values
