@@ -61,7 +61,15 @@
 }
 
 /* ---------------------- ID ---------------------- */
-
+#chart-wrapper{
+    margin: auto;
+    padding: 10px; 
+    height: 40vh;
+    width:  80vw;
+    min-height: 600px;
+    justify-content: center;
+    align-items: center;  
+}
 
 /* ----------------- Underline Animation CSS -----------------*/
 .hover-underline-animation {
